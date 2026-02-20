@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Choice Chaap | Premium Plant-Based Healthy Bites</title>
+    <meta name="description" content="Premium Veg. Chaap | 100% Plant-Based | High Protein • Flavour Packed. Based in Pune.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            rust: '#C25E35',     /* Tandoori Rust / Spice */
+                            green: '#2C4A3B',    /* Deep Earthy Forest Green */
+                            lightGreen: '#E9EFEB',
+                            cream: '#FDFBF7',    /* Premium Off-White Background */
+                            dark: '#1A1A1A',
+                            text: '#333333'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(44, 74, 59, 0.08)',
+                        'glow': '0 0 20px rgba(194, 94, 53, 0.2)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #333333;
+        }
+
+        /* Glassmorphism Header */
+        .glass-nav {
+            background: rgba(253, 251, 247, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(44, 74, 59, 0.05);
+        }
+
+        /* Custom Scrollbar for Reviews */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Button micro-interaction */
+        .btn-premium {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(194, 94, 53, 0.3);
+        }
+
+        /* Custom Accordion transition */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-rust selection:text-white pb-20 md:pb-0">
+
+    <div class="bg-brand-green text-white text-[11px] md:text-xs font-bold tracking-widest uppercase text-center py-2.5">
+        🌱 100% Plant-Based | Free Delivery in Pune for orders over ₹499
+    </div>
+
+    <nav class="glass-nav sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <button class="lg:hidden text-brand-dark">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+
+            <a href="#" class="flex flex-col items-center lg:items-start group">
+                <span class="font-serif text-2xl font-bold text-brand-green leading-none tracking-tight">
+                    Good Choice<span class="text-brand-rust">.</span>
+                </span>
+                <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500 font-bold mt-1">Healthy Bites</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-brand-green">
+                <a href="#shop" class="hover:text-brand-rust transition">Shop Chaap</a>
+                <a href="#process" class="hover:text-brand-rust transition">How It's Made</a>
+                <a href="#reviews" class="hover:text-brand-rust transition">Reviews</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden md:flex items-center gap-2 text-xs font-bold text-brand-green uppercase tracking-widest hover:text-brand-rust transition">
+                    <i data-lucide="user" class="w-4 h-4"></i> Login
+                </a>
+                <a href="#" class="relative group">
+                    <div class="p-2 bg-brand-lightGreen rounded-full group-hover:bg-brand-rust transition">
+                        <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-green group-hover:text-white transition"></i>
+                    </div>
+                    <span class="absolute -top-1 -right-1 bg-brand-rust text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold border-2 border-brand-cream">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-10 pb-16 lg:pt-20 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-lightGreen text-brand-green text-xs font-bold uppercase tracking-wider mb-6 border border-brand-green/20">
+                        <span class="w-2 h-2 rounded-full bg-brand-rust animate-pulse"></span> 100% Plant-Based Protein
+                    </div>
+                    
+                    <h1 class="text-4xl lg:text-6xl font-serif font-bold text-brand-dark leading-[1.1] mb-6">
+                        Authentic Flavour. <br>
+                        <span class="italic text-brand-rust font-light">Zero Guilt.</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg font-light">
+                        Experience the rich, smoky flavors of premium vegetarian chaap. High in protein, packed with authentic Indian spices, and crafted for the modern health-conscious foodie.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#shop" class="bg-brand-rust text-white px-8 py-4 rounded-lg font-bold text-sm tracking-widest uppercase btn-premium text-center shadow-glow">
+                            Shop The Chaap
+                        </a>
+                        <a href="#process" class="flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-bold text-brand-green hover:bg-brand-lightGreen transition border border-brand-green/20 text-sm tracking-widest uppercase">
+                            Discover Process
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center gap-4 text-xs font-bold text-gray-500 uppercase tracking-widest">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-8 h-8 rounded-full border-2 border-white -mr-2">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-8 h-8 rounded-full border-2 border-white -mr-2">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-8 h-8 rounded-full border-2 border-white">
+                        <span class="ml-2">Loved by 500+ Punekars</span>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute inset-0 bg-brand-green/5 rounded-full blur-3xl transform scale-90 translate-y-10"></div>
+                    <img src="https://img.freepik.com/free-photo/delicious-grilled-kebabs-with-sides_23-2152002831.jpg" 
+                         alt="Premium Marinated Soya Chaap" 
+                         class="relative z-10 w-full rounded-2xl shadow-2xl object-cover aspect-[4/5] md:aspect-square">
+                    
+                    <div class="absolute bottom-8 left-[-20px] bg-white p-4 rounded-xl shadow-soft flex items-center gap-3 z-20">
+                        <div class="bg-orange-100 p-2 rounded-full">
+                            <i data-lucide="flame" class="w-5 h-5 text-brand-rust"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Protein Packed</p>
+                            <p class="text-sm font-bold text-brand-dark">20g per serving</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="border-y border-brand-green/10 bg-white">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="leaf" class="w-6 h-6 text-brand-green"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">100% Vegan</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="activity" class="w-6 h-6 text-brand-green"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">High Protein</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="shield-off" class="w-6 h-6 text-brand-green"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Zero Preservatives</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <i data-lucide="map-pin" class="w-6 h-6 text-brand-green"></i>
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Made in Pune</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-20 lg:py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+                
+                <div class="lg:col-span-5 h-fit lg:sticky lg:top-32 order-2 lg:order-1">
+                    <div class="mb-4 text-brand-rust font-bold text-[10px] uppercase tracking-[0.2em]">The Bestseller</div>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-brand-dark mb-4">Classic Tandoori Soya Chaap</h2>
+                    
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="flex text-yellow-500"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <span class="text-sm font-semibold text-gray-500 underline">(128 Reviews)</span>
+                    </div>
+
+                    <p class="text-gray-600 mb-8 font-light leading-relaxed">
+                        Soft, juicy, and marinated in our secret blend of authentic Indian spices. Ready to grill, pan-fry, or add to your favorite curry. A guilt-free indulgence.
+                    </p>
+                    
+                    <div class="flex items-baseline gap-4 mb-8">
+                        <span class="text-3xl font-bold text-brand-dark">₹299</span>
+                        <span class="text-lg text-gray-400 line-through">₹350</span>
+                        <span class="bg-brand-rust/10 text-brand-rust text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Save 15%</span>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Select Quantity</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button class="border-2 border-brand-green bg-brand-lightGreen text-brand-green py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition">
+                                500g Pack
+                            </button>
+                            <button class="border border-gray-200 text-gray-400 py-3 rounded-lg text-sm font-bold uppercase tracking-widest hover:border-brand-green hover:text-brand-green transition">
+                                1 Kg Pack
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-brand-rust text-white py-4 rounded-lg text-sm font-bold uppercase tracking-widest hover:bg-[#a64e2b] transition mb-6 shadow-glow flex justify-center items-center gap-2 btn-premium">
+                        Add to Cart <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    </button>
+
+                    <div class="grid grid-cols-2 gap-y-4 text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-8">
+                        <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Vacuum Sealed</div>
+                        <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> 100% Veg</div>
+                        <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> Fast Pune Delivery</div>
+                        <div class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-green"></i> High Fiber</div>
+                    </div>
+                    
+                    <div class="border-t border-gray-200">
+                         <details class="group py-4 cursor-pointer border-b border-gray-200">
+                            <summary class="flex justify-between items-center font-serif text-lg text-brand-dark">
+                                Ingredients & Nutrition <span class="transition group-open:rotate-180 text-brand-rust"><i data-lucide="chevron-down" class="w-5 h-5"></i></span>
+                            </summary>
+                            <div class="text-gray-600 mt-4 leading-relaxed font-light text-sm">
+                                <strong>Ingredients:</strong> Soy Flour, Wheat Gluten, Water, Secret Tandoori Spice Mix, Cold Pressed Mustard Oil, Himalayan Pink Salt.<br><br>
+                                <strong>Nutrition (per 100g):</strong> Protein 20g | Carbs 12g | Fats 4g | Fiber 8g.
+                            </div>
+                        </details>
+                        <details class="group py-4 cursor-pointer border-b border-gray-200">
+                            <summary class="flex justify-between items-center font-serif text-lg text-brand-dark">
+                                Cooking Instructions <span class="transition group-open:rotate-180 text-brand-rust"><i data-lucide="chevron-down" class="w-5 h-5"></i></span>
+                            </summary>
+                            <div class="text-gray-600 mt-4 leading-relaxed font-light text-sm">
+                                Thaw the chaap for 15 minutes. Pan fry with a light drizzle of oil for 5-7 minutes until golden brown, or bake in an oven at 200°C for 10 minutes. Serve hot with mint chutney!
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+                    <img src="https://img.freepik.com/premium-photo/tandoori-soya-chaap-soy-chap-dish-prepared-by-marinating-tandoori-spices-closeup-view_1093310-401.jpg" 
+                         class="w-full aspect-square md:aspect-[4/3] object-cover rounded-2xl shadow-soft">
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <img src="https://img.freepik.com/premium-photo/tandoori-soya-chaap-soy-chap-dish-prepared-by-marinating-tanhttps://img.freepik.com/premium-photo/tandoori-soya-chaap-soy-chap-dish-prepared-by-marinating-tandoori-spices-closeup-view_466689-85281.jpg" 
+                             class="w-full aspect-[4/5] object-cover rounded-2xl shadow-soft" alt="Spices">
+                        <img src="https://img.freepik.com/premium-photo/tandoori-soya-chaap-soy-chap-dish-prepared-by-marinating-tandoori-spices-closeup-view_466689-85294.jpg" 
+                             class="w-full aspect-[4/5] object-cover rounded-2xl shadow-soft" alt="Cooked Chaap">
+                    </div>
+
+                    <img src="https://img.freepik.com/premium-photo/tandoori-soya-chaap-soy-chap-dish-prepared-by-marinating-tandoori-spices-closeup-view_466689-85297.jpg" 
+                         class="w-full aspect-video object-cover rounded-2xl shadow-soft">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 bg-brand-green text-brand-cream relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/food.png')]"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-rust text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">Our Craft</span>
+                <h2 class="font-serif text-4xl md:text-5xl mb-4">How It's Made</h2>
+                <p class="font-light text-brand-lightGreen/80 max-w-xl mx-auto">From ethically sourced ingredients to your dining table, maintaining hygiene and flavor at every step.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-brand-cream/10 rounded-full flex items-center justify-center mb-6 text-brand-rust">
+                        <i data-lucide="wheat" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">1. Pure Sourcing</h3>
+                    <p class="text-sm font-light text-brand-lightGreen/70">Selecting high-quality non-GMO soy and premium wheat proteins.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-brand-cream/10 rounded-full flex items-center justify-center mb-6 text-brand-rust">
+                        <i data-lucide="utensils" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">2. Dough Prep</h3>
+                    <p class="text-sm font-light text-brand-lightGreen/70">Kneaded to perfection to create that authentic, pull-apart texture.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-brand-cream/10 rounded-full flex items-center justify-center mb-6 text-brand-rust">
+                        <i data-lucide="flame" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">3. Marination</h3>
+                    <p class="text-sm font-light text-brand-lightGreen/70">Soaked in our signature blend of roasted spices and herbs.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 mx-auto bg-brand-cream/10 rounded-full flex items-center justify-center mb-6 text-brand-rust">
+                        <i data-lucide="package-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-2">4. Vacuum Sealed</h3>
+                    <p class="text-sm font-light text-brand-lightGreen/70">Packed immediately to lock in freshness without preservatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <span class="text-brand-rust text-[10px] font-bold uppercase tracking-[0.2em] mb-2 block">Testimonials</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-brand-dark">Loved by Health Enthusiasts</h2>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-xl">4.9/5</span>
+                    <div class="flex text-yellow-500"><i data-lucide="star" class="w-5 h-5 fill-current"></i></div>
+                </div>
+            </div>
+
+            <div class="flex overflow-x-auto gap-6 hide-scroll pb-8 snap-x">
+                <div class="min-w-[320px] md:min-w-[400px] bg-brand-cream p-8 rounded-2xl border border-gray-100 shadow-soft snap-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-brand-green/10 text-brand-green text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
+                            <i data-lucide="check-circle" class="w-3 h-3"></i> Verified Buyer
+                        </span>
+                    </div>
+                    <div class="flex text-brand-rust w-4 mb-3"><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i></div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-6 font-light">"As a vegetarian looking for high protein options in Pune, Good Choice Chaap is a lifesaver. The texture is incredible and the spices are spot on!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-green text-white rounded-full flex items-center justify-center font-bold font-serif">A</div>
+                        <div>
+                            <p class="font-bold text-sm text-brand-dark">Aditi S.</p>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Kalyani Nagar, Pune</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] md:min-w-[400px] bg-brand-cream p-8 rounded-2xl border border-gray-100 shadow-soft snap-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-brand-green/10 text-brand-green text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
+                            <i data-lucide="check-circle" class="w-3 h-3"></i> Verified Buyer
+                        </span>
+                    </div>
+                    <div class="flex text-brand-rust w-4 mb-3"><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i></div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-6 font-light">"The best soya chaap I've ever made at home. It doesn't break while cooking and absorbs all the curry flavors perfectly. Highly recommend to everyone."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-green text-white rounded-full flex items-center justify-center font-bold font-serif">R</div>
+                        <div>
+                            <p class="font-bold text-sm text-brand-dark">Rahul M.</p>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Wakad, Pune</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[320px] md:min-w-[400px] bg-brand-cream p-8 rounded-2xl border border-gray-100 shadow-soft snap-start">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="bg-brand-green/10 text-brand-green text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
+                            <i data-lucide="check-circle" class="w-3 h-3"></i> Verified Buyer
+                        </span>
+                    </div>
+                    <div class="flex text-brand-rust w-4 mb-3"><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i><i data-lucide="star" class="fill-current"></i></div>
+                    <p class="text-gray-700 text-sm leading-relaxed mb-6 font-light">"Switched completely to Good Choice for our family dinners. My kids love the Malai Chaap version. Delivery was super fast too!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-green text-white rounded-full flex items-center justify-center font-bold font-serif">P</div>
+                        <div>
+                            <p class="font-bold text-sm text-brand-dark">Priya K.</p>
+                            <p class="text-[10px] text-gray-400 uppercase tracking-widest">Pimpri, Pune</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 border-b border-gray-800 pb-12">
+            
+            <div class="col-span-1 md:col-span-1">
+                <span class="font-serif text-3xl font-bold text-white leading-none tracking-tight block mb-4">
+                    Good Choice<span class="text-brand-rust">.</span>
+                </span>
+                <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">
+                    Premium Veg. Chaap | 100% Plant-Based<br>
+                    High Protein • Flavour Packed.
+                </p>
+                <a href="https://www.instagram.com/good.choicechaap/" target="_blank" class="inline-flex items-center gap-2 text-brand-rust hover:text-white transition text-sm font-bold uppercase tracking-widest">
+                    <i data-lucide="instagram" class="w-5 h-5"></i> Follow Us
+                </a>
+            </div>
+
+            <div>
+                <h4 class="text-brand-green text-[10px] font-bold uppercase tracking-[0.2em] mb-6">Explore</h4>
+                <ul class="space-y-4 text-sm font-light text-gray-400">
+                    <li><a href="#" class="hover:text-white transition">Shop All</a></li>
+                    <li><a href="#" class="hover:text-white transition">Our Story</a></li>
+                    <li><a href="#" class="hover:text-white transition">Wholesale / B2B</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-brand-green text-[10px] font-bold uppercase tracking-[0.2em] mb-6">Support</h4>
+                <ul class="space-y-4 text-sm font-light text-gray-400">
+                    <li><a href="#" class="hover:text-white transition">Track Order</a></li>
+                    <li><a href="#" class="hover:text-white transition">Shipping Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Refunds</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-brand-green text-[10px] font-bold uppercase tracking-[0.2em] mb-6">Contact Us</h4>
+                <div class="space-y-4 text-sm font-light text-gray-400">
+                    <p class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-brand-rust shrink-0"></i>
+                        <span>Pimpri, Pune<br>Maharashtra - 411017</span>
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-brand-rust shrink-0"></i>
+                        <a href="tel:+919993102308" class="hover:text-white transition">+91 99931 02308</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-600">
+            <p>&copy; 2026 Good Choice Chaap. All Rights Reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <span>Privacy</span>
+                <span>Terms</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-white shadow-[0_-10px_30px_rgba(0,0,0,0.1)] p-4 flex items-center justify-between z-50 border-t border-gray-100">
+        <div class="flex flex-col">
+            <span class="text-[10px] text-brand-rust font-bold uppercase tracking-widest">Total Price</span>
+            <div class="flex items-center gap-2">
+                <span class="text-xl font-bold text-brand-dark">₹299</span>
+                <span class="text-xs text-gray-400 line-through">₹350</span>
+            </div>
+        </div>
+        <button class="bg-brand-rust text-white px-8 py-3 rounded-lg text-xs font-bold uppercase tracking-widest shadow-glow hover:bg-[#a64e2b] transition flex items-center gap-2">
+            Buy Now
+        </button>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Initialize AOS Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+
+        // Sticky Header Drop Shadow Logic
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
